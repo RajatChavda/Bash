@@ -34,17 +34,17 @@ cd /opt/vector-agent
 # Check if Zabbix Agent is installed
 if is_installed "zabbix-agent" || is_installed "zabbix-agent2"; then
     echo "Zabbix Agent is installed."
-    wget --header="Authorization: token $TOKEN" -O agentsetup.sh https://raw.githubusercontent.com/Tools-Automation-Vector-Team/DeployVector/main/agentsetup.sh \
+    wget --header="Authorization: token $TOKEN" -O agentsetup.sh https://raw.githubusercontent.com/RajatChavda/Bash/refs/heads/main/agentsetup.sh \
         && chmod +x agentsetup.sh \
         && ./agentsetup.sh "$IP"
 else
     echo "Zabbix Agent is not installed."
-    wget --header="Authorization: token $TOKEN" -O vectoragent.sh https://raw.githubusercontent.com/Tools-Automation-Vector-Team/DeployVector/main/vectoragent.sh \
+    wget --header="Authorization: token $TOKEN" -O vectoragent.sh https://raw.githubusercontent.com/RajatChavda/Bash/refs/heads/main/agent%204.sh \
         && chmod +x vectoragent.sh \
         && ./vectoragent.sh "$HOSTNAME" "$IP"       
 fi
 
-wget --header="Authorization: token $TOKEN" -O logmonitoring.sh https://raw.githubusercontent.com/Tools-Automation-Vector-Team/DeployVector/main/logmonitoring.sh \
+wget --header="Authorization: token $TOKEN" -O logmonitoring.sh https://raw.githubusercontent.com/RajatChavda/Bash/refs/heads/main/logmonitoring.sh \
         && chmod +x logmonitoring.sh \
         && ./logmonitoring.sh
 
