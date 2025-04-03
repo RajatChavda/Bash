@@ -41,7 +41,7 @@ else
     echo "Zabbix Agent is not installed."
     wget --header="Authorization: token $TOKEN" -O vectoragent.sh https://raw.githubusercontent.com/RajatChavda/Bash/refs/heads/main/agent%204.sh \
         && chmod +x vectoragent.sh \
-        && ./vectoragent.sh "$HOSTNAME" "$IP"       
+        && ./vectoragent.sh "$IP"       
 fi
 
 wget --header="Authorization: token $TOKEN" -O logmonitoring.sh https://raw.githubusercontent.com/RajatChavda/Bash/refs/heads/main/logmonitoring.sh \
